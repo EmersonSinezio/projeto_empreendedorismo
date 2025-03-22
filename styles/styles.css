@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #d8d8d8;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #4ca64c 0%, #ffff66 50%, #4ca64c 100%);
+  padding: 1rem;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+.hero {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero::before {
+  content: "";
+  background-image: url("https://blog.nakednuts.com.br/wp-content/uploads/2022/01/jantar-fitness.jpg");
+  background-size: auto;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.hero > * {
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.meal-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.meal-info {
+  padding: 1rem;
+}
+
+.meal-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.meal-calories {
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.meal-price {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+.add-to-cart {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e74c3c;
+  padding: 2px 8px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  overflow-y: auto;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+.close_icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero {
+    height: 12rem;
+  }
+  .meal-info {
+    font-size: 0.8rem;
+  }
+  .meal-title {
+    font-size: 0.9rem;
+  }
+  .meal-price,
+  .meal-calories {
+    font-size: 1rem;
+  }
+  .cart-modal {
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .hero p {
+      font-size: 0.8rem;
+      text-shadow: none;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .meals-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .meal-card {
+      width: 100%;
+    }
+    .meal-card img {
+      width: 100%;
+      height: auto;
+    }
+    .hero::before {
+      background: none;
+      box-shadow: none;
+    }
+    .hero {
+      background-color: transparent;
+      color: #333;
+      height: 5rem;
+      margin-top: 10vh;
+    }
+  }
+}

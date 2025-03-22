@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitMeals - Delivery Saudável</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./assets/icon-removebg-preview.png" alt="Logo" />
+        <span>FitMeals</span>
+      </div>
+      <button class="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </button>
+    </nav>
+
+    <section class="hero">
+      <h1>Comida Saudável Entregue em Sua Casa</h1>
+      <p>Escolha entre mais de 100 opções fit toda semana</p>
+    </section>
+
+    <div class="meals-container"></div>
+
+    <div class="cart-modal">
+      <h2>Seu Carrinho</h2>
+      <div class="cart-items"></div>
+      <p>Total: R$ <span class="total-price">0.00</span></p>
+
+      <svg
+        class="close_icon"
+        onclick="closeCart()"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+        />
+      </svg>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
