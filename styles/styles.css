@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #d8d8d8;
+  background-color: #fff;
 }
 
 .navbar {
@@ -28,6 +28,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.logo span {
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+span:hover {
+  color: #4ca64c;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 .logo img {
   width: 50px;
@@ -82,10 +91,9 @@ body {
 }
 
 .meal-card {
-  background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
 
@@ -140,8 +148,14 @@ body {
   cursor: pointer;
   position: relative;
   margin-right: 2rem;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out;
 }
-
+.cart-btn:hover {
+  color: #4ca64c;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
 .cart-count {
   position: absolute;
   top: -10px;
